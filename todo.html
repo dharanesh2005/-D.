@@ -1,4 +1,4 @@
-<!-- <input id="input" class="lon" />
+<input id="input" class="lon" />
 <button onclick="add()">Add</button>
 <ul id="list">
   <li>
@@ -33,56 +33,5 @@
   } */
   .lon {
     size: 100px;
-  } -->
-<input id="input" class="lon" placeholder="Enter text" />
-<button id="add-btn">Add</button>
-<ul id="list">
-  <li>
-    Hello
-    <button class="delete-btn">Delete</button>
-  </li>
-</ul>
-<div id="DIV" class="div"></div>
-<script>
-  const div = document.getElementById("DIV");
-  const input = document.getElementById("input");
-  const list = document.getElementById("list");
-  const addBtn = document.getElementById("add-btn");
-
-  addBtn.addEventListener("click", add);
-
-  function add() {
-    const listItem = document.createElement("li");
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "Delete";
-    deleteBtn.classList.add("delete-btn");
-    deleteBtn.addEventListener("click", deleteItem);
-    listItem.textContent = input.value;
-    listItem.appendChild(deleteBtn);
-    list.appendChild(listItem);
-    input.value = "";
-  }
-
-  function deleteItem(event) {
-    event.target.parentElement.remove();
-  }
-
-  list.addEventListener("click", (event) => {
-    if (event.target.classList.contains("delete-btn")) {
-      deleteItem(event);
-    }
-  });
-</script>
-
-<style>
-  .div {
-    background-color: aqua;
-    margin: 50px auto;
-    width: 200px;
-    height: 100px;
-  }
-  .lon {
-    width: 100px;
-  }
-</style>
-```</style>
+  } 
+  
